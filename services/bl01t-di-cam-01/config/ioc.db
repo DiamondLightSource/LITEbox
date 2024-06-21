@@ -1,0 +1,26 @@
+record(calc, "bl-ec-test:IBEK:SUM") {
+  field(DESC, "Sum A and B")
+  field(CALC, "A+B")
+  field(INPA, "bl-ec-test:IBEK:A")
+  field(INPB, "bl-ec-test:IBEK:B")
+}
+
+record(ao, "bl-ec-test:IBEK:A") {
+    field(DESC, "A voltage")
+    field(PREC, "3")
+    field(EGU,  "Volts")
+    field(DRVL, "-10")
+    field(DRVH, "+10")
+    field(VAL,  "0.000")
+    field(FLNK, "bl-ec-test:IBEK:SUM")
+}
+
+record(ao, "bl-ec-test:IBEK:B") {
+    field(DESC, "B voltage")
+    field(PREC, "3")
+    field(EGU,  "Volts")
+    field(DRVL, "-10")
+    field(DRVH, "+10")
+    field(VAL,  "0.000")
+    field(FLNK, "bl-ec-test:IBEK:SUM")
+}

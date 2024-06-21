@@ -1,0 +1,11 @@
+How to change mtu on a interface temporarily!
+
+sudo ip link set dev enp0s31f6 mtu 9000
+
+How to filter traffic to the camera out of the docker network
+
+iptables -A OUTPUT -t filter -o docker0 -d 169.254.0.0/16 -j DROP
+
+TO permanently change the mtu on a interface:
+nmtui and edit the interface and save changes.
+

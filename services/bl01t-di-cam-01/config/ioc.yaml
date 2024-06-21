@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://github.com/epics-containers/ioc-adaravis/releases/download/2024.4.2/ibek.ioc.schema.json
+
+ioc_name: "{{ __utils__.get_env('IOC_NAME') }}"
+
+description: gige camera 01
+
+entities:
+  - type: epics.EpicsEnvSet
+    name: EPICS_TZ
+    value: "GMT0BST"
+
+  - type: epics.EpicsCaMaxArrayBytes
+    max_bytes: 3000000
+
+  - type: devIocStats.iocAdminSoft
+    IOC: "{{ ioc_name | upper }}"
+
+  - type: ADAravis.aravisCamera
+    CLASS: AVT_Manta_G895B
+    P: BLEC1-EA-DET-01
+    R: ":DET:"
+    ID: "169.254.246.2"
+    PORT: DET.CAM
+
+  - type: ADCore.NDPvaPlugin
+    P: BLEC1-EA-DET-01
+    R: ":TX:"
+    PORT: DET.PVA
+    NDARRAY_PORT: DET.CAM
+    PVNAME: BLEC1-EA-DET-01:TX:PVA
+
+  - type: ADCore.NDFileHDF5
+    ENABLED: 1
+    NDARRAY_PORT: DET.CAM
+    P: BLEC1-EA-DET-01
+    PORT: DET.HDF
+    R: ":HDF5:"
+
+  - type: ADCore.NDFileTIFF
+    P: BLEC1-EA-DET-01
+    R: ":TIFF:"
+    PORT: DET.TIFF
+    NDARRAY_PORT: DET.CAM
