@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://github.com/epics-containers/ioc-adaravis/releases/download/2024.4.2/ibek.ioc.schema.json
 
-ioc_name: "{{ __utils__.get_env('IOC_NAME') }}"
+ioc_name: "{{ _global.get_env('IOC_NAME') }}"
 
 description: gige camera 01
 
@@ -41,3 +41,39 @@ entities:
     R: ":TIFF:"
     PORT: DET.TIFF
     NDARRAY_PORT: DET.CAM
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:HDF5:FilePath
+    value: "/workspaces/output"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:HDF5:FileTemplate
+    value: "%s%s%03d.h5"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:HDF5:FilePath
+    value: "/workspaces/output"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:HDF5:EnableCallbacks
+    value: "1"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:HDF5:CreateDirectory
+    value: "1"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:HDF5:FileWriteMode
+    value: "Stream"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:HDF5:AutoIncrement
+    value: "1"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:HDF5:NumCapture
+    value: "20"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:Acquire
+    value: "1"
