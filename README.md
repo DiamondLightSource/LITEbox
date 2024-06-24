@@ -6,7 +6,8 @@ Beyond Harwell Open Week, the LITEbox will be able to be used for various forms 
 
 ## Hardware
 
-TODO: add system diagram and photos
+![image](https://github.com/DiamondLightSource/LITEbox/assets/101418278/c110fea4-164e-48e5-8794-8315de257c07)
+
 
 The hardware consists of:
 
@@ -15,6 +16,7 @@ The hardware consists of:
 - [Thorlabs DDR25/M Rotation Mount](https://www.thorlabs.com/thorproduct.cfm?partnumber=DDR25/M)
 - [Thorlabs KBD101 DC Servo Driver](https://www.thorlabs.com/thorproduct.cfm?partnumber=KBD101)
 - [PandABox](https://quantumdetectors.com/products/pandabox/)
+- [AVT Manta G-895B](https://www.alliedvision.com/en/camera-selector/detail/manta/g-895)
 
 ## Software
 
