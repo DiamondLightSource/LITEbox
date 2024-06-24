@@ -74,6 +74,11 @@ entities:
     pv: BLEC1-EA-DET-01:HDF5:NumCapture
     value: "20"
 
+  # use FreeRun to turn off triggering
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:TriggerSource
+    value: Line1
+
   - type: epics.dbpf
     pv: BLEC1-EA-DET-01:DET:Acquire
     value: "1"
