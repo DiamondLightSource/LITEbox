@@ -23,9 +23,9 @@ export EC_REGISTRY_MAPPING_REGEX='
 # the namespace to use for kubernetes deployments - use local for local docker/podman
 export EC_K8S_NAMESPACE=local
 # the git repo for this project
-export EC_SERVICES_REPO=git@github.com:epics-containers/bl-ec-test.git
+export EC_SERVICES_REPO=https://github.com/diamondlightsource/LITEbox
 # declare your centralised log server Web UI
-export EC_LOG_URL="https://graylog2.diamond.ac.uk/search?rangetype=relative&fields=message%2Csource&width=1489&highlightMessage=&relative=172800&q=pod_name%3A{service_name}*"
+export EC_LOG_URL="https://graylog.diamond.ac.uk/search?rangetype=relative&fields=message%2Csource&width=1489&highlightMessage=&relative=172800&q=pod_name%3A{service_name}*"
 # enforce a specific container cli - defaults to whatever is available
 # export EC_CONTAINER_CLI=podman
 # enable debug output in all 'ec' commands
