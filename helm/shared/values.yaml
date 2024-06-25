@@ -19,7 +19,7 @@ ioc-instance:
   # useAffinity - only run on nodes with label beamline:<beamline-name>
   # or location:<location-name>
   # Comment out useAffiniity for dedicated cluster, set to true for shared cluster
-  
+
 
   # root folder for ioc source/binaries inside generic IOC container
   iocFolder: /epics/ioc
@@ -62,8 +62,8 @@ ioc-instance:
   # iXXdetector user/group IDs
   securityContext:
     allowPrivilegeEscalation: false
-  #   runAsUser: 37887
-  #   runAsGroup: 37887
+    runAsUser: 37887
+    runAsGroup: 37887
 
   ########################################################################################
   # The following values are expected to be overridden in individual IOC values.yaml
@@ -77,7 +77,7 @@ ioc-instance:
   # the PVC
   dataVolume:
     # Create a PVC called {.Chart.Name}-data when true
-    pvc: true
+    pvc: false
     # A path on the host machine to write data into. Also used as the path that the
     # pvc or hostPath will be mounted at so that users need not be confused about
     # inside/outside container paths.

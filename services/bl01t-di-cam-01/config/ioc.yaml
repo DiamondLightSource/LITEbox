@@ -20,9 +20,9 @@ entities:
     P: BLEC1-EA-DET-01
     R: ":DET:"
     # local connection to laptop
-    # ID: "169.254.246.2"
+    ID: "169.254.246.2"
     # controls dev network
-    ID: "172.23.243.42"
+    # ID: "172.23.243.42"
     PORT: DET.CAM
 
   - type: ADCore.NDPvaPlugin
@@ -47,15 +47,11 @@ entities:
 
   - type: epics.dbpf
     pv: BLEC1-EA-DET-01:HDF5:FilePath
-    value: "/workspaces/output"
+    value: "/data"
 
   - type: epics.dbpf
     pv: BLEC1-EA-DET-01:HDF5:FileTemplate
-    value: "%s%s%03d.h5"
-
-  - type: epics.dbpf
-    pv: BLEC1-EA-DET-01:HDF5:FilePath
-    value: "/workspaces/output"
+    value: "%s%s%05d.h5"
 
   - type: epics.dbpf
     pv: BLEC1-EA-DET-01:HDF5:EnableCallbacks
@@ -77,10 +73,17 @@ entities:
     pv: BLEC1-EA-DET-01:HDF5:NumCapture
     value: "20"
 
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:GC_GevSCPSPacketSize
+    value: "1500"
+
   # use FreeRun to turn off triggering
   - type: epics.dbpf
     pv: BLEC1-EA-DET-01:DET:TriggerSource
+    # use Line1 for triggering by PandaBox
     value: Line1
+    # use Freerun for continuous acquisition
+    # value: Freerun
 
   - type: epics.dbpf
     pv: BLEC1-EA-DET-01:DET:Acquire

@@ -31,6 +31,12 @@ export EC_LOG_URL="https://graylog2.diamond.ac.uk/search?rangetype=relative&fiel
 # enable debug output in all 'ec' commands
 # export EC_DEBUG=1
 
+# THESE are for the local docker/podman deployment only
+export EC_LOCAL_DATA_FOLDER=/data
+export EC_LOCAL_USER_ID=$(id -u)
+export EC_LOCAL_GROUP_ID=$(id -g)
+export EC_LOCAL_OPI_FOLDER=/data/opi
+
 
 #### SECTION 2. Install ec #####################################################
 
