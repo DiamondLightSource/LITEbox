@@ -29,11 +29,22 @@ This repository contains the supporting files that are needed on the laptop that
 
 # How to use LITEBox
 
+## TLDR
+
+assuming you have the laptop, camera and pandabox plugged into the PoE switch.
+- login as ec-test on the laptop
+- `cd LITEbox`
+- `./setup.sh`
+- repeat `./setup.sh` if things go wrong
+- `./phoebus.sh` gets you a GUI to the IOC (for debugging only)
+- TODO - add the Jupiter notebook instructions here ...
+
 ## Setup
 
 To setup for on a new machine requires:-
 
 - ubuntu 22.04 is installed on the machine (recommended - other distros probably OK)
+- git and python3.11 or newer installed
 - docker is installed
   - see https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script
 - the user is a member of the docker group

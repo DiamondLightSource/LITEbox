@@ -33,8 +33,11 @@ export EC_LOG_URL="https://graylog.diamond.ac.uk/search?rangetype=relative&field
 
 # THESE are for the local docker/podman deployment only
 export EC_LOCAL_DATA_FOLDER=/data
-export EC_LOCAL_USER_ID=$(id -u)
-export EC_LOCAL_GROUP_ID=$(id -g)
+# export EC_LOCAL_USER_ID=$(id -u)
+# export EC_LOCAL_GROUP_ID=$(id -g)
+# currently using root as we have not solved 'runtime' volume permissions issue yet.
+export EC_LOCAL_USER_ID=0
+export EC_LOCAL_GROUP_ID=0
 export EC_LOCAL_OPI_FOLDER=/data/opi
 
 
