@@ -19,7 +19,10 @@ entities:
     CLASS: AVT_Manta_G895B
     P: BLEC1-EA-DET-01
     R: ":DET:"
-    ID: "169.254.246.2"
+    # local connection to laptop
+    # ID: "169.254.246.2"
+    # controls dev network
+    ID: "172.23.243.42"
     PORT: DET.CAM
 
   - type: ADCore.NDPvaPlugin
