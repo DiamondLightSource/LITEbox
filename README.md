@@ -57,12 +57,18 @@ This will:
 - install 'ec' tool
 - use ec to deploy the camera IOC
 
+## Run the experiment
+To start the motor moving and trigger the camera to create a set of images when receiving triggers, use the `kbd101.py`. This code can be embedded in a Jupiter notebook that will do the reconstruction.
+
+Each execution of the above python script will result in a new HDF file appearing in the folder /data.
+
 ## Debugging
 
-To launch a terminal with the necessary tools to debug the IOC, run the following command:
+### configure environemnt
+To configure a terminal with the necessary tools to debug the IOC, run the following command:
 
 ```bash
-./debug.sh
+source ./config.sh
 ```
 
 This will open a terminal that has the 'ec' tool setup.
@@ -73,4 +79,25 @@ e.g.
 
 - `ec ps` lists the IOCs running
 - `ec logs bl01t-di-cam-01` shows the logs for the camera IOC
+
+### loading a GUI to the IOC
+
+```bash
+./phoebus.sh
+```
+
+### testing the camera.
+
+To test the camera without triggers:
+
+```bash
+source ./config.sh
+ec exec bl01t-di-cam-01
+caput BLEC1-EA-DET-01:DET:TriggerSource Freerun
+
+# restore to triggered with
+caput BLEC1-EA-DET-01:DET:TriggerSource Line1
+```
+
+You can use phoebus to control all other camera settings.
 
