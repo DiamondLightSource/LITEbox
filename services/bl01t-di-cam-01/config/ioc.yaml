@@ -46,6 +46,18 @@ entities:
     NDARRAY_PORT: DET.CAM
 
   - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:AcquireTime
+    value: "0.005"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:SizeX
+    value: "1024"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:SizeY
+    value: "1024"
+    
+  - type: epics.dbpf
     pv: BLEC1-EA-DET-01:HDF5:FilePath
     value: "/data"
 
@@ -74,8 +86,37 @@ entities:
     value: "20"
 
   - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:BinX
+    value: "2"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:BinX
+    value: "2"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:MinX
+    value: "512"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:MinY
+    value: "512"
+
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:HDF5:NumCapture
+    value: "320"
+
+  - type: epics.dbpf
     pv: BLEC1-EA-DET-01:DET:GC_GevSCPSPacketSize
     value: "1500"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:TX:EnableCallbacks
+    value: "1"
+
+  - type: epics.dbpf
+    pv: BLEC1-EA-DET-01:DET:AcquirePeriod
+    value: "0.064"
 
   # use FreeRun to turn off triggering
   - type: epics.dbpf

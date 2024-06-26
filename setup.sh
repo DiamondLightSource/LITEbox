@@ -15,8 +15,10 @@ if [ ! -d venv ]; then
     echo "Creating virtual environment"
     python3 -m venv venv
 fi
+echo activating python venv
 source venv/bin/activate
-pip install -r requirements.txt
+echo installing python requirements
+pip install -r requirements.txt >/dev/null
 
 # use 'ec' to install the IOC in the local docker instance
 source ./environment.sh
@@ -24,8 +26,10 @@ echo "Deleting previous IOC version if it exists"
 echo y | ec delete bl01t-di-cam-01
 echo
 echo "Deploying the IOC"
-ec deploy bl01t-di-cam-01 0.1.1
+echo y | ec deploy-local services/bl01t-di-cam-01
 
-echo "IOC deployed you should see it in the following 'ec ps' output:"
+echo
+echo "IOC deployed - you should see it in the following 'ec ps' output:"
+echo
 ec ps
 

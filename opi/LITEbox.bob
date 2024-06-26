@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-06-26 14:11:12 by root-->
+<display version="2.0.0">
+  <name>LITEbox</name>
+  <macros>
+    <P>BLEC1-EA-DET-01</P>
+    <R>:DET:</R>
+  </macros>
+  <width>1300</width>
+  <height>899</height>
+  <grid_step_x>4</grid_step_x>
+  <grid_step_y>4</grid_step_y>
+  <widget type="label" version="2.0.0">
+    <name>Title</name>
+    <class>TITLE</class>
+    <text>LITEbox GUI</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>480</width>
+    <height>25</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="image" version="2.0.0">
+    <name>Image</name>
+    <pv_name>pva://BLEC1-EA-DET-01:TX:PVA</pv_name>
+    <x>496</x>
+    <y>25</y>
+    <width>780</width>
+    <height>832</height>
+    <color_map>
+      <name>GRAY</name>
+    </color_map>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>HDF</name>
+    <x>40</x>
+    <y>316</y>
+    <width>437</width>
+    <height>96</height>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>Capture</text>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="choice" version="2.0.0">
+      <name>ToggleButton</name>
+      <pv_name>BLEC1-EA-DET-01:HDF5:Capture</pv_name>
+      <x>155</x>
+      <height>20</height>
+      <items>
+        <item>Item 1</item>
+        <item>Item 2</item>
+      </items>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>BLEC1-EA-DET-01:HDF5:Capture_RBV</pv_name>
+      <x>300</x>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_12</name>
+      <text>Num Images</text>
+      <y>34</y>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextUpdate_10</name>
+      <pv_name>BLEC1-EA-DET-01:HDF5:NumCaptured_RBV</pv_name>
+      <x>155</x>
+      <y>34</y>
+      <width>205</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Camera</name>
+    <x>40</x>
+    <y>48</y>
+    <width>428</width>
+    <height>256</height>
+    <transparent>true</transparent>
+    <widget type="combo" version="2.0.0">
+      <name>ComboBox_1</name>
+      <pv_name>BLEC1-EA-DET-01:DET:TriggerMode</pv_name>
+      <x>155</x>
+      <y>69</y>
+      <height>20</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Triggering</text>
+      <y>69</y>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextUpdate_1</name>
+      <pv_name>BLEC1-EA-DET-01:DET:TriggerMode_RBV</pv_name>
+      <x>260</x>
+      <y>69</y>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>ComboBox_2</name>
+      <pv_name>BLEC1-EA-DET-01:DET:GC_TriggerSource</pv_name>
+      <x>155</x>
+      <y>109</y>
+      <height>20</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Trigger Source</text>
+      <y>109</y>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextUpdate_2</name>
+      <pv_name>BLEC1-EA-DET-01:DET:GC_TriggerSource_RBV</pv_name>
+      <x>260</x>
+      <y>109</y>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Frame Rate</text>
+      <y>149</y>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextUpdate_3</name>
+      <pv_name>BLEC1-EA-DET-01:DET:FrameRate_RBV</pv_name>
+      <x>155</x>
+      <y>149</y>
+      <width>205</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>Num Images</text>
+      <y>184</y>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextUpdate_4</name>
+      <pv_name>BLEC1-EA-DET-01:DET:NumImagesCounter_RBV</pv_name>
+      <x>155</x>
+      <y>184</y>
+      <width>205</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>TextEntry</name>
+      <pv_name>$(P)$(R)ArrayCounter</pv_name>
+      <x>155</x>
+      <y>38</y>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextUpdate_9</name>
+      <pv_name>$(P)$(R)ArrayCounter_RBV</pv_name>
+      <x>260</x>
+      <y>38</y>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>Array Counter</text>
+      <y>38</y>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_13</name>
+      <text>Acquire</text>
+      <y>6</y>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="choice" version="2.0.0">
+      <name>ToggleButton_2</name>
+      <pv_name>$(P)$(R)Acquire</pv_name>
+      <x>155</x>
+      <y>6</y>
+      <height>20</height>
+      <items>
+        <item>Item 1</item>
+        <item>Item 2</item>
+      </items>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_2</name>
+      <pv_name>$(P)$(R)Acquire_RBV</pv_name>
+      <x>300</x>
+      <y>6</y>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>Reconnect</text>
+    <x>58</x>
+    <y>500</y>
+    <width>150</width>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>ToggleButton_3</name>
+    <pv_name>BLEC1-EA-DET-01:DET:ARResetCamera.PROC</pv_name>
+    <x>213</x>
+    <y>500</y>
+    <width>205</width>
+    <height>20</height>
+    <items>
+      <item>Reset</item>
+    </items>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>Detector State</text>
+    <x>58</x>
+    <y>468</y>
+    <width>150</width>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>TextUpdate_11</name>
+    <pv_name>$(P)$(R)DetectorState_RBV</pv_name>
+    <x>213</x>
+    <y>468</y>
+    <width>205</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>ADDriver</text>
+    <x>58</x>
+    <y>600</y>
+    <width>150</width>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>OpenDisplay</name>
+    <actions>
+      <action type="open_display">
+        <file>ADDriver.pvi.bob</file>
+        <macros>
+          <P>BLEC1-EA-DET-01</P>
+          <R>:DET:</R>
+        </macros>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BLEC1-EA-DET-01 :DET:</text>
+    <x>213</x>
+    <y>600</y>
+    <width>205</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>NDPluginPva</text>
+    <x>58</x>
+    <y>625</y>
+    <width>150</width>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>OpenDisplay_1</name>
+    <actions>
+      <action type="open_display">
+        <file>NDPluginPva.pvi.bob</file>
+        <macros>
+          <P>BLEC1-EA-DET-01</P>
+          <R>:TX:</R>
+        </macros>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BLEC1-EA-DET-01 :TX:</text>
+    <x>213</x>
+    <y>625</y>
+    <width>205</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>NDFileHDF5</text>
+    <x>58</x>
+    <y>650</y>
+    <width>150</width>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>OpenDisplay_2</name>
+    <actions>
+      <action type="open_display">
+        <file>NDFileHDF5.pvi.bob</file>
+        <macros>
+          <P>BLEC1-EA-DET-01</P>
+          <R>:HDF5:</R>
+        </macros>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BLEC1-EA-DET-01 :HDF5:</text>
+    <x>213</x>
+    <y>650</y>
+    <width>205</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>NDFileTIFF</text>
+    <x>58</x>
+    <y>675</y>
+    <width>150</width>
+    <tooltip>$(text)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>OpenDisplay_3</name>
+    <actions>
+      <action type="open_display">
+        <file>NDFileTIFF.pvi.bob</file>
+        <macros>
+          <P>BLEC1-EA-DET-01</P>
+          <R>:TIFF:</R>
+        </macros>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BLEC1-EA-DET-01 :TIFF:</text>
+    <x>213</x>
+    <y>675</y>
+    <width>205</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>

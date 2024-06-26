@@ -39,5 +39,4 @@ mounts="
 "
 
 set -x
-$docker run ${mounts} ${args} ${x11} ghcr.io/epics-containers/ec-phoebus:latest -resource /data/opi/index.bob
-
+$docker run ${mounts} ${args} ${x11} ghcr.io/epics-containers/ec-phoebus:latest -resource $thisdir/opi/LITEbox.bob
