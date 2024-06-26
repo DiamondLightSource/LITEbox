@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-06-26 14:11:12 by root-->
+<!--Saved on 2024-06-26 14:34:00 by root-->
 <display version="2.0.0">
   <name>LITEbox</name>
   <macros>
@@ -44,8 +44,8 @@
     <name>HDF</name>
     <x>40</x>
     <y>316</y>
-    <width>437</width>
-    <height>96</height>
+    <width>428</width>
+    <height>128</height>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
       <name>Label_4</name>
@@ -87,6 +87,26 @@
       </font>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>Full File Name</text>
+      <y>66</y>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextUpdate</name>
+      <pv_name>$(P):HDF5:FullFileName_RBV</pv_name>
+      <x>155</x>
+      <y>66</y>
+      <width>205</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <format>6</format>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Camera</name>
@@ -96,41 +116,16 @@
     <height>256</height>
     <transparent>true</transparent>
     <widget type="combo" version="2.0.0">
-      <name>ComboBox_1</name>
-      <pv_name>BLEC1-EA-DET-01:DET:TriggerMode</pv_name>
-      <x>155</x>
-      <y>69</y>
-      <height>20</height>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_1</name>
-      <text>Triggering</text>
-      <y>69</y>
-      <width>150</width>
-      <tooltip>$(text)</tooltip>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>TextUpdate_1</name>
-      <pv_name>BLEC1-EA-DET-01:DET:TriggerMode_RBV</pv_name>
-      <x>260</x>
-      <y>69</y>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-    </widget>
-    <widget type="combo" version="2.0.0">
       <name>ComboBox_2</name>
       <pv_name>BLEC1-EA-DET-01:DET:GC_TriggerSource</pv_name>
       <x>155</x>
-      <y>109</y>
+      <y>114</y>
       <height>20</height>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_2</name>
       <text>Trigger Source</text>
-      <y>109</y>
+      <y>114</y>
       <width>150</width>
       <tooltip>$(text)</tooltip>
     </widget>
@@ -138,7 +133,7 @@
       <name>TextUpdate_2</name>
       <pv_name>BLEC1-EA-DET-01:DET:GC_TriggerSource_RBV</pv_name>
       <x>260</x>
-      <y>109</y>
+      <y>114</y>
       <font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
@@ -148,7 +143,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_3</name>
       <text>Frame Rate</text>
-      <y>149</y>
+      <y>152</y>
       <width>150</width>
       <tooltip>$(text)</tooltip>
     </widget>
@@ -156,7 +151,7 @@
       <name>TextUpdate_3</name>
       <pv_name>BLEC1-EA-DET-01:DET:FrameRate_RBV</pv_name>
       <x>155</x>
-      <y>149</y>
+      <y>152</y>
       <width>205</width>
       <font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -167,7 +162,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_6</name>
       <text>Num Images</text>
-      <y>184</y>
+      <y>187</y>
       <width>150</width>
       <tooltip>$(text)</tooltip>
     </widget>
@@ -175,7 +170,7 @@
       <name>TextUpdate_4</name>
       <pv_name>BLEC1-EA-DET-01:DET:NumImagesCounter_RBV</pv_name>
       <x>155</x>
-      <y>184</y>
+      <y>187</y>
       <width>205</width>
       <font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -187,14 +182,14 @@
       <name>TextEntry</name>
       <pv_name>$(P)$(R)ArrayCounter</pv_name>
       <x>155</x>
-      <y>38</y>
+      <y>40</y>
       <horizontal_alignment>1</horizontal_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>TextUpdate_9</name>
       <pv_name>$(P)$(R)ArrayCounter_RBV</pv_name>
       <x>260</x>
-      <y>38</y>
+      <y>40</y>
       <font>
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
@@ -204,7 +199,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_11</name>
       <text>Array Counter</text>
-      <y>38</y>
+      <y>40</y>
       <width>150</width>
       <tooltip>$(text)</tooltip>
     </widget>
@@ -231,6 +226,31 @@
       <pv_name>$(P)$(R)Acquire_RBV</pv_name>
       <x>300</x>
       <y>6</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>Trigger Mode</text>
+      <y>75</y>
+      <width>150</width>
+      <tooltip>$(text)</tooltip>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>ComboBox</name>
+      <pv_name>$(P)$(R)TriggerMode</pv_name>
+      <x>155</x>
+      <y>75</y>
+      <height>20</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextUpdate_1</name>
+      <pv_name>$(P)$(R)TriggerMode_RBV</pv_name>
+      <x>260</x>
+      <y>75</y>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
     </widget>
   </widget>
   <widget type="label" version="2.0.0">
