@@ -6,10 +6,8 @@ cd $THIS_DIR
 
 # create a data directory for the IOC to write to
 sudo mkdir -p /data
-sudo rm -rf /data/*
 # create a folder for the IOC to write its OPI files to
 sudo mkdir -p /data/opi
-sudo rm -rf /data/opi/*
 sudo chmod -R a+rwx /data
 
 # setup a python virtual environment with the required packages
@@ -23,7 +21,8 @@ pip install -r requirements.txt
 # use 'ec' to install the IOC in the local docker instance
 source ./environment.sh
 echo "Deleting previous IOC version if it exists"
-ec delete bl01t-di-cam-01
+echo y | ec delete bl01t-di-cam-01
+echo
 echo "Deploying the IOC"
 ec deploy bl01t-di-cam-01 0.1.1
 

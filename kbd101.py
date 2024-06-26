@@ -1,4 +1,4 @@
-# pip install pyserial
+# pip install pyserial aioca
 import asyncio
 import time
 

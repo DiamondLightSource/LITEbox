@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# This script works relative to the repo directory
-THIS_DIR=$(cd $(dirname $0); pwd)
-cd $THIS_DIR
-
 # activate the venv
 . ./venv/bin/activate
 
