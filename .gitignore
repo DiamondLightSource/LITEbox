@@ -3,7 +3,5 @@
 .history
 **/Chart.lock
 **/charts
-**/*.bob
-edm/bobs
 **/*copy
 venv
