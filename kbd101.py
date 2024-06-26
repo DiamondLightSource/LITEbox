@@ -42,7 +42,7 @@ try:
     # Scale factors from P39 for DDR25 stage
     VSCALE = 26843.5
     ASCALE = 2.74878
-    velocity = 360  # degree/s
+    velocity = 7.5  # degree/s
     accl = 1000  # degree/s/s
 
     # Calculate velocity and acceleration from
@@ -59,7 +59,7 @@ try:
     # start the HDF5 capture
     asyncio.run(start_capture())
 
-    time.sleep(10)
+    time.sleep(60)
 finally:
     # MGMSG_MOT_MOVE_STOP
     send_command("65 04 01 02 50 01")
