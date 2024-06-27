@@ -1,3 +1,4 @@
 copier
 edge-containers-cli>=3.5.5
-
+pyserial
+aioca
