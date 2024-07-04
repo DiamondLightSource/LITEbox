@@ -4,6 +4,9 @@ The LITEbox in the first instance is being produced for the Harwell Open Day on 
 
 Beyond Harwell Open Week, the LITEbox will be able to be used for various forms of engagement; from Diamond public open days, to outreach in schools. Making the LITEbox portable will therefore enable it to be used more at external events and opportunities and share the science that happens at Diamond far and wide.
 
+![image](https://github.com/DiamondLightSource/LITEbox/assets/101418278/2d948911-8c40-4aec-8297-f0794e7f75f6)
+
+
 ## Hardware
 
 ![image](https://github.com/DiamondLightSource/LITEbox/assets/101418278/c110fea4-164e-48e5-8794-8315de257c07)
